@@ -34,13 +34,11 @@ export class ProfilePage {
         error => {
           if (error.status == 403) {
             this.navCtrl.setRoot('HomePage');
-            alert("pro.ts-Problema no login!");
           }
         });
     }
     else {
       this.navCtrl.setRoot('HomePage');
-      alert("pro.ts-Problema no login!");
     }
   }
 
