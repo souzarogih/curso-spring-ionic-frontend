@@ -24,12 +24,19 @@ export class CardPage {
         portador : ['HIGOR S ANDRADE',[Validators.required]],
         cardFlag : ['MASTERCARD',[Validators.required]],
         emitter : ['Nubank',[Validators.required]],
-        idCard : ['1',[]]
+        idCard : ['1',[]],
+        cardType : ['1',[Validators.required, Validators.maxLength(1)]]
       });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CardPage');
+    
+  }
+
+  //O metódo sendRegisterCard é chamado pelo botão Cadastrar da tela de Cadastro de Cartão para enviar os dados para o backend. 
+  sendRegisterCard() {
+    console.log("teste de cadastado");
   }
 
 }
